@@ -126,7 +126,7 @@ lib/
  ├─ ai.ts                   # AI provider abstraction + fallback logic
  ├─ mock.ts                 # Deterministic mock question generator
  └─ passages.ts             # Reading passages
-
+```
 
 ## Getting Started (Local Development)
 
