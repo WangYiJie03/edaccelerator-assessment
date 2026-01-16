@@ -229,17 +229,6 @@ export default function HomePage() {
                 <div className="text-sm text-slate-500">Questions</div>
                 <div className="text-xl font-semibold">AI-generated MCQs</div>
               </div>
-
-              {status === "ready" ? (
-                <button
-                  onClick={submit}
-                  disabled={!canSubmit}
-                  className="rounded-xl bg-emerald-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-emerald-700 disabled:opacity-50"
-                  title={!canSubmit ? "Answer all questions to submit" : "Submit"}
-                >
-                  Submit
-                </button>
-              ) : null}
             </div>
 
             {status === "idle" ? (
@@ -297,7 +286,25 @@ export default function HomePage() {
                     </div>
                   );
                 })}
+                {/* Bottom Submit (better UX) */}
+                {status === "ready" && !submitted ? (
+                  <div className="flex items-center justify-between gap-3 rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                    <div className="text-sm text-slate-600">
+                      {canSubmit
+                        ? "Ready to submit?"
+                        : `Answer all questions to submit (${answeredCount}/${total}).`}
+                    </div>
 
+                    <button
+                      onClick={submit}
+                      disabled={!canSubmit}
+                      className="rounded-xl bg-emerald-600 px-5 py-2 text-sm font-semibold text-white shadow-sm hover:bg-emerald-700 disabled:opacity-50"
+                      title={!canSubmit ? "Answer all questions to submit" : "Submit"}
+                    >
+                      Submit
+                    </button>
+                  </div>
+                ) : null}
                 {/* Final score */}
                 {submitted ? (
                   <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
