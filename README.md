@@ -99,21 +99,22 @@ AI_PROVIDER=mock
 
 No configuration is required to run the app in mock mode.
 
-Tech Stack
+---
 
-Next.js (App Router)
+## Tech Stack
 
-TypeScript
+- **Next.js (App Router)**
+- **TypeScript**
+- **Tailwind CSS**
+- **OpenAI API** (optional)
+- Deterministic mock AI generator
+- Deployed on **Vercel**
 
-Tailwind CSS
+---
 
-OpenAI API (optional)
+## Project Structure (Key Files)
 
-Deterministic mock AI generator
-
-Deployed on Vercel
-
-Project Structure (Key Files)
+```bash
 app/
  ├─ api/
  │   └─ generate-questions/
@@ -126,42 +127,46 @@ lib/
  ├─ mock.ts                 # Deterministic mock question generator
  └─ passages.ts             # Reading passages
 
-Getting Started (Local Development)
+
+## Getting Started (Local Development)
+
+Install dependencies:
+```bash
 npm install
+
+Start the development server:
 npm run dev
 
-
-Open
+Open the app in your browser:
 http://localhost:3000
 
 The app runs in mock mode by default.
 
-Notes for Reviewers
+## Notes for Reviewers
 
-The application defaults to mock AI for reliability and ease of review
+- The app runs in **mock mode by default** to ensure reliability and a smooth review experience.
+- The application defaults to **mock AI** for deterministic behaviour and ease of evaluation.
+- **OpenAI integration** can be enabled instantly via environment variables.
+- The focus of this assessment is **architecture, data flow, and robustness**, rather than visual complexity.
+- UI decisions prioritise **readability, learning flow, and maintainability**.
+- All **core requirements** from the assessment brief have been fully implemented.
 
-OpenAI integration can be enabled instantly via environment variables
+---
 
-The focus of this assessment is architecture, data flow, and robustness
+## Deployment
 
-UI decisions prioritise readability, learning flow, and maintainability
+This project is deployed using **Vercel**.
 
-All core requirements from the assessment brief are implemented
+- Any push to the `main` branch automatically triggers a new **production deployment**.
+- The deployed application has been tested on both **desktop and mobile** devices.
 
-Deployment
+---
 
-This project is deployed using Vercel.
-
-Any push to the main branch automatically triggers a new production deployment.
-
-Final Remarks
+## Final Remarks
 
 This implementation is intentionally scoped to demonstrate:
 
-Practical AI integration strategies
-
-Thoughtful handling of real-world constraints
-
-Clean, maintainable frontend architecture
-
-A strong focus on learning outcomes over superficial features
+- Practical and resilient **AI integration strategies**
+- Thoughtful handling of **real-world constraints** (network restrictions, CI, reviewer environment)
+- **Clean, maintainable frontend architecture**
+- A strong focus on **learning outcomes** rather than superficial features
