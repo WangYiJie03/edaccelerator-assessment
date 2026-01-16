@@ -139,8 +139,8 @@ npm run dev
 
 Open the app in your browser:
 http://localhost:3000
+```
 
-The app runs in mock mode by default.
 
 ## Notes for Reviewers
 
