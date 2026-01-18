@@ -2,7 +2,7 @@
 
 ## Live Demo
 
-👉 **Production URL**  
+ **Production URL**  
 https://edaccelerator-assessment-psi.vercel.app
 
 (Responsive and tested on both desktop and mobile)
